@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="project3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsm-g4-dWQ">
+                                <rect key="frame" x="150" y="190" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="lu1-by-ACR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLM-37-FnI">
+                                <rect key="frame" x="165.5" y="268" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="selectPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Shz-5h-zd1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgu-gy-6bP">
+                                <rect key="frame" x="167.5" y="405" width="40" height="30"/>
+                                <state key="normal" title="Insert"/>
+                                <connections>
+                                    <action selector="insertWithPressed_:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Te7-Lu-E26"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bal-qz-FGW">
+                                <rect key="frame" x="160" y="333" width="55" height="30"/>
+                                <state key="normal" title="Replace"/>
+                                <connections>
+                                    <action selector="replacePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xf3-gJ-IAP"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJ9-MJ-xoc">
+                                <rect key="frame" x="0.0" y="443" width="375" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hsm-g4-dWQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2FS-c2-6BD"/>
+                            <constraint firstItem="vgu-gy-6bP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5oe-RS-mAW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YJ9-MJ-xoc" secondAttribute="bottom" constant="8" id="66z-yA-3CI"/>
+                            <constraint firstItem="fLM-37-FnI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="72P-0b-E4F"/>
+                            <constraint firstItem="Bal-qz-FGW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Kc-8e-Y5z"/>
+                            <constraint firstItem="YJ9-MJ-xoc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FLs-Yk-8J3"/>
+                            <constraint firstItem="YJ9-MJ-xoc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PeB-Si-ghw"/>
+                            <constraint firstItem="vgu-gy-6bP" firstAttribute="top" secondItem="Bal-qz-FGW" secondAttribute="bottom" constant="42" id="Ref-J3-Fo4"/>
+                            <constraint firstItem="Bal-qz-FGW" firstAttribute="top" secondItem="fLM-37-FnI" secondAttribute="bottom" constant="35" id="bUG-g3-g0a"/>
+                            <constraint firstItem="fLM-37-FnI" firstAttribute="top" secondItem="hsm-g4-dWQ" secondAttribute="bottom" constant="48" id="fcy-Pl-QTb"/>
+                            <constraint firstItem="YJ9-MJ-xoc" firstAttribute="top" secondItem="vgu-gy-6bP" secondAttribute="bottom" constant="8" id="yH4-1u-AOe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="YJ9-MJ-xoc" id="Xii-Pn-fzY"/>
+                        <outlet property="textField" destination="hsm-g4-dWQ" id="PUo-NY-ji0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
